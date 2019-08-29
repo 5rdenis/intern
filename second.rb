@@ -1,4 +1,4 @@
-goods_hash = Hash.new{|hsh,key| hsh[key] = [] }	
+goods_hash = Hash.new{|hsh,key| hsh[key] = [] }	# создаем hash, в котором value это array
 
 input = ""
 name = ""
@@ -15,7 +15,7 @@ while input != "stop" do
 
   goods_hash[name].push price
   goods_hash[name].push quantity
-  totalsum += price * quantity
+  totalsum += price * quantity # считаем полную сумму
   print "Enter name,price,quantity(e.g.: milk,5,10);or type STOP to quit:"
   input = gets.chomp
 end
